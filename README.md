@@ -98,7 +98,7 @@ The main component that coordinates the application flow and state management.
 
 - **OMDB API**:
   - Base URL: `https://www.omdbapi.com/`
-  - API Key: `c2e3ea52`
+  - API Key: `URAPI`
   - Fetches movies and detailed information based on the IMDb ID.
 
 ## Installation
