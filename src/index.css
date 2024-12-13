@@ -13,6 +13,40 @@
   --color-red-dark: #e03131;
 }
 
+/* Default (Light Theme) */
+body {
+  color: var(--color-text-dark);
+  background-color: var(--color-background-100);
+}
+
+[data-theme="dark"] {
+  --color-primary: #3b82f6;
+  --color-primary-light: #60a5fa;
+  --color-text: #f8f9fa;
+  --color-text-dark: #ced4da;
+  --color-background-100: #1e1e1e;
+  --color-background-500: #121212;
+  --color-background-900: #0d0d0d;
+  --color-red: #e63946;
+  --color-red-dark: #d00000;
+}
+
+/* Optional: Body styles for dark mode */
+[data-theme="dark"] body {
+  color: var(--color-text);
+  background-color: var(--color-background-500);
+}
+.toggle-theme {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+svg {
+  width: 25px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +70,8 @@ body {
 
 .nav-bar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 40px;
+  gap: 5px;
   align-items: center;
   height: 7.2rem;
   padding: 0 3.2rem;
@@ -57,7 +92,7 @@ body {
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  overflow: scroll;
+  /* overflow: scroll; */
   position: relative;
 }
 
@@ -141,7 +176,7 @@ body {
 .list {
   list-style: none;
   padding: 0.8rem 0;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .list-watched {
